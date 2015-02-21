@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'game/index'
-
-  get 'game/create'
-
-  get 'game/show'
+  resources :games
 
   root 'top#home'
 
