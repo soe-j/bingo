@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'game/index'
+
+  get 'game/create'
+
+  get 'game/show'
+
   root 'top#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
