@@ -1,2 +1,17 @@
-<h1>Game#show</h1>
-<p>Find me in app/views/game/show.html.erb</p>
+<header>
+  <h1>BINGO</h1>
+  <%= @game.name %>
+  <%= link_to "ハンドル", handle_game_path %>
+</header>
+
+<br><br><br>
+
+<div>
+  <% if @game.balls.present? %>
+    <table>
+      <% @game.balls.each do |ball| %>
+        <%= ball.number %>
+      <% end %>
+    <% end %>
+  </table>
+</div>

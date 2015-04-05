@@ -14,6 +14,17 @@ class GamesController < ApplicationController
   end
 
   def show
+    @game = Game.find(params[:id])
+  end
+
+  def handle
+    @game = Game.find(params[:id])
+  end
+
+  def update
+    @game = Game.find(params[:id])
+    @game.balls.create
+    redirect_to handle_game_path
   end
 
   private

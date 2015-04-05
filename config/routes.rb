@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :games
+  resources :games do
+    member do
+      get 'handle', to: 'games#handle'
+    end
+  end
 
   root 'top#home'
 

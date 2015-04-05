@@ -1,3 +1,7 @@
 class Game < ActiveRecord::Base
-  has_many :appeared_balls, class_name: 'bingo_balls'
+  has_many :balls, class_name: 'BingoBall'
+
+  def appeared_numbers
+    balls.pluck(:number)
+  end
 end
