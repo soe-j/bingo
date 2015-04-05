@@ -6,12 +6,7 @@
 
 <br><br><br>
 
-<div>
-  <% if @game.balls.present? %>
-    <table>
-      <% @game.balls.each do |ball| %>
-        <%= ball.number %>
-      <% end %>
-    <% end %>
-  </table>
+
+<div id='numbers_board'>
+  <ul id='numbers_list'></ul>
 </div>
