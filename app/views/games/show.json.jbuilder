@@ -1,1 +1,1 @@
-json.balls @game.balls, :id, :number
+json.array! @game.balls.pluck(:number)
