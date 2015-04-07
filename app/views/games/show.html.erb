@@ -9,7 +9,7 @@
 <div id='numbers_board'>
   <ul id='numbers_list'>
     <% @game.balls.each do |ball| %>
-      <li><%= ball.number %></li>
+      <img src='/assets/<%= ball.number %>.png'>
     <% end %>
   </ul>
 </div>
