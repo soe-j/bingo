@@ -1,7 +1,5 @@
 <header>
-  <h1>BINGO</h1>
-  <%= @game.name %>
-  <%= link_to "ハンドル", handle_game_path %>
+  <h1><%= image_tag 'logo_colorful.png' %></h1>
 </header>
 
 <br>
@@ -11,7 +9,9 @@
     <% 75.times do %>
       <%= image_tag 'gray.png' %>
     <% end %>
+    <%= link_to (image_tag 'black.png'), handle_game_path %>
   </div>
   <div id='numbers_list'>
   </div>
 </div>
+
