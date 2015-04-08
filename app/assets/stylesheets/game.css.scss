@@ -1,3 +1,11 @@
-#numbers_list img {
-  width: 50px;
+#numbers_board {
+  position: relative;
+  img {
+    width: 100px;
+  }
+}
+
+#numbers_list {
+  position: absolute;
+  top: 0px;
 }

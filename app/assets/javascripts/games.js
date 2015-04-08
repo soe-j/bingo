@@ -18,7 +18,7 @@ $(document).ready(function(){
     var content = '';
     var i;
     for(i = 0; i < balls.length; i++) {
-      content += "\n<img src='/assets/" + balls[i] + ".png'>";
+      content += "\n<img src='/assets/numbers/" + balls[i] + ".png'>";
     }
     $('#numbers_list').append(content);
 
