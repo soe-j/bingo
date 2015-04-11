@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
   window.addEventListener('devicemotion', function (e) {
     var x = e.accelerationIncludingGravity.x;
     var y = e.accelerationIncludingGravity.y;
