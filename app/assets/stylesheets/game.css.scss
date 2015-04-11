@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 h1 img {
   height: 49px;
 }
@@ -12,4 +16,15 @@ h1 img {
 #numbers_list {
   position: absolute;
   top: 0px;
+}
+
+#machi_wrap {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+#machi_handle {
+  position: absolute;
+  bottom: -250px;
 }
