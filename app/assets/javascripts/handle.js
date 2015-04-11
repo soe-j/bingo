@@ -5,7 +5,7 @@ $(function(){
     var z = e.accelerationIncludingGravity.z;
 
     // 3方向加速度の合計の絶対値が一定以上のとき
-    if (Math.abs(x+y+z) > 50) {
+    if (Math.abs(x+y+z) > 49) {
       alert("振ってるよ");
     }
   }, true);
