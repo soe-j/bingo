@@ -1,12 +1,11 @@
 $(function(){
-
   if ($('body').data('controller') == 'games' && $('body').data('action') == 'show'){
+
     setInterval(function(){
       $.getJSON(location.href + '.json', set_balls);
     }, 2000);
 
     function set_balls(new_balls){
-
       // ローカルストレージから古いデータを取得
       var str = localStorage.getItem("balls");
       old_balls = JSON.parse(str);
@@ -28,7 +27,6 @@ $(function(){
       var json_text = JSON.stringify(new_balls);
       localStorage.setItem("balls", json_text);
     }
-  }
 
     //id:spare_handle　に trigger を設定
     $("#spare_handle").click(function(){
