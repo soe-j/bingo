@@ -11,13 +11,26 @@ $(function(){
       // 3方向加速度の合計の絶対値が一定以上のとき
       if (Math.abs(x+y+z) > 48 && update_flag == 1) {
         update_flag = 0;
-        update_bingo();
-        wait(5000);
-        update_flag = 1;
+        machi_go();
+        setTimeout(function(){
+          update_bingo();
+        }, 1000);
+        setTimeout(function(){
+          update_flag = 1;
+          machi_standby();
+        }, 3000);
       }
     }, true);
 
-    $('#handle').click(update_bingo);
+    $('#handle').click(function(){
+      update_flag = 0;
+      machi_go();
+      update_bingo();
+      setTimeout(function(){
+        update_flag = 1;
+        machi_standby();
+      }, 3000);
+    });
 
     function update_bingo() {
       var current_url = location.href;
@@ -29,13 +42,18 @@ $(function(){
       });
     }
 
-    function wait( timeWait ) {
-      var timeStart = new Date().getTime();
-      var timeNow = new Date().getTime();
-      while( timeNow < (timeStart + timeWait ) ) {
-        timeNow = new Date().getTime();
-      }
-      return;
+    function machi_go(){
+      $("#machi_handle").animate(
+        {bottom: "1000px", opacity: "0"}, 1000
+      );
+    }
+
+    function machi_standby(){
+      $("#machi_handle").animate(
+        {bottom: "-250px"}, 0
+      ).animate(
+        {opacity: "1"}, 1000
+      );
     }
 
   }
