@@ -30,4 +30,13 @@ $(function(){
     }
   }
 
+    //id:spare_handle　に trigger を設定
+    $("#spare_handle").click(function(){
+      $.ajax({
+        type: "PATCH",
+        url: location.href
+      });
+    });
+
+  }
 });
