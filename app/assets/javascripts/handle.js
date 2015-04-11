@@ -9,7 +9,17 @@ $(function(){
       var z = e.accelerationIncludingGravity.z;
 
       // 3方向加速度の合計の絶対値が一定以上のとき
-      if (Math.abs(x+y+z) > 48 && update_flag == 1) {
+      if (Math.abs(x+y+z) > 48) {
+        trig();
+      }
+    }, true);
+
+    $('#handle').click(function(){
+      trig();
+    });
+
+    function trig() {
+      if (update_flag == 1) {
         update_flag = 0;
         machi_go();
         setTimeout(function(){
@@ -20,17 +30,7 @@ $(function(){
           machi_standby();
         }, 3000);
       }
-    }, true);
-
-    $('#handle').click(function(){
-      update_flag = 0;
-      machi_go();
-      update_bingo();
-      setTimeout(function(){
-        update_flag = 1;
-        machi_standby();
-      }, 3000);
-    });
+    }
 
     function update_bingo() {
       var current_url = location.href;
