@@ -28,7 +28,7 @@ $(function(){
       localStorage.setItem("balls", json_text);
     }
 
-    //id:spare_handle　に trigger を設定
+    // #spare_handleクリックでビンゴ更新
     $("#spare_handle").click(function(){
       $.ajax({
         type: "PATCH",
