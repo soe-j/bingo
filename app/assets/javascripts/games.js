@@ -33,7 +33,7 @@ $(function(){
         content += "\n<img src='/assets/machi_numbers/" + balls[i] + ".png'>";
       }
 
-      $('#just_number_wrap').append(content).animate({opacity: "1"}, 'fast').delay(10000).animate({opacity: "0"}, 'fast');
+      $('#just_number_wrap').empty().append(content).contents().animate({opacity: "1", width: "500px"}, 'fast').delay(10000).animate({opacity: "0"}, 'fast');
 
       // リストに追加
       var content = '';
