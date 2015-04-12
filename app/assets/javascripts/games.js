@@ -41,7 +41,9 @@ $(function(){
       for(i = 0; i < balls.length; i++) {
         content += "\n<img src='/assets/numbers/" + balls[i] + ".png'>";
       }
-      $('#numbers_list').append(content);
+      setTimeout(function(){
+        $('#numbers_list').append(content);
+      }, 11000);
     }
 
     // #spare_handleクリックでビンゴ更新
