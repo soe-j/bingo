@@ -2,10 +2,10 @@ $(function(){
   if ($('body').data('controller') == 'games' && $('body').data('action') == 'show'){
 
     setInterval(function(){
-      $.getJSON(location.href + '.json', set_balls);
-    }, 2000);
+      $.getJSON(location.href + '.json', check_balls);
+    }, 1000);
 
-    function set_balls(new_balls){
+    function check_balls(new_balls){
       // ローカルストレージから古いデータを取得
       var str = localStorage.getItem("balls");
       old_balls = JSON.parse(str);
