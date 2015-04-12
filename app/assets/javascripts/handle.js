@@ -28,7 +28,7 @@ $(function(){
         setTimeout(function(){
           update_flag = 1;
           machi_standby();
-        }, 3000);
+        }, 11000);
       }
     }
 
