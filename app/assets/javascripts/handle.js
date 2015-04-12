@@ -24,7 +24,7 @@ $(function(){
         machi_go();
         setTimeout(function(){
           update_bingo();
-        }, 1000);
+        }, 2000);
         setTimeout(function(){
           update_flag = 1;
           machi_standby();
@@ -44,7 +44,7 @@ $(function(){
 
     function machi_go(){
       $("#machi_handle").animate(
-        {bottom: "1000px", opacity: "0"}, 1000
+        {bottom: "1000px", opacity: "0"}, 'fast'
       );
     }
 
