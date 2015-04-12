@@ -15,17 +15,33 @@ $(function(){
         return ($.inArray(n, old_balls) == -1);
       });
 
-      // 差分だけページに追加
+      if (balls.length != 0) {
+        console.log(balls);
+        set_balls(balls);
+
+        // ローカルストレージに保存
+        var json_text = JSON.stringify(new_balls);
+        localStorage.setItem("balls", json_text);
+      }
+    }
+
+    function set_balls(balls){
+      // 出た目をでっかく表示
+      var content = '';
+      var i;
+      for(i = 0; i < balls.length; i++) {
+        content += "\n<img src='/assets/machi_numbers/" + balls[i] + ".png'>";
+      }
+
+      $('#just_number_wrap').append(content).animate({opacity: "1"}, 'fast').delay(10000).animate({opacity: "0"}, 'fast');
+
+      // リストに追加
       var content = '';
       var i;
       for(i = 0; i < balls.length; i++) {
         content += "\n<img src='/assets/numbers/" + balls[i] + ".png'>";
       }
       $('#numbers_list').append(content);
-
-      // ローカルストレージに保存
-      var json_text = JSON.stringify(new_balls);
-      localStorage.setItem("balls", json_text);
     }
 
     // #spare_handleクリックでビンゴ更新
