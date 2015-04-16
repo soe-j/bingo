@@ -9,7 +9,7 @@ $(function(){
       var z = e.accelerationIncludingGravity.z;
 
       // 3方向加速度の合計の絶対値が一定以上のとき
-      if (Math.abs(x+y+z) > 48) {
+      if (Math.abs(x) + Math.abs(y) + Math.abs(z) > 49) {
         trig();
       }
     }, true);
@@ -24,7 +24,7 @@ $(function(){
         machi_go();
         setTimeout(function(){
           update_bingo();
-        }, 2000);
+        }, 1000);
         setTimeout(function(){
           update_flag = 1;
           machi_standby();
